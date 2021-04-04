@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def login(request):
     return render(request, "login.html", {})
+
+
+def realTime(request):
+    return render(request, 'realTime.html', {})

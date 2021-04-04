@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+#loginInterface {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (2fr)[5] 1fr;
+      grid-template-columns: 1fr repeat(5, 2fr) 1fr;
+  -ms-grid-rows: 1fr 6fr 1fr;
+      grid-template-rows: 1fr 6fr 1fr;
+  width: 100vw;
+  height: 100vh;
+      grid-template-areas: ". header header header header header   ." ". svg svg .  options options  ." ". footer footer footer footer footer   .";
+}
+
+#loginInterface #header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: end;
+}
+
+#loginInterface #header i {
+  color: black;
+}
+
+#loginInterface #svg {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: svg;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#loginInterface #svg svg {
+  width: 100%;
+}
+
+#loginInterface #options {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: options;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#loginInterface #options div {
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 5fr;
+      grid-template-columns: 2fr 5fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  border-radius: 40px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  border: 1px solid white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#loginInterface #options div span {
+  font-size: 50px;
+}
+
+#loginInterface #options div h4 {
+  justify-self: flex-start;
+}
+
+#loginInterface #options div:hover {
+  background-color: white;
+  opacity: 0.9;
+}
+
+#realTime {
+  width: 100vw;
+  height: 100vh;
+}
+
+#realTime #myChart {
+  max-height: 600px;
+}
+/*# sourceMappingURL=styles.css.map */

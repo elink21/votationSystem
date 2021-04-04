@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+#loginInterface {
+  display: grid;
+  grid-template-columns: 1fr repeat(5, 2fr) 1fr;
+  grid-template-rows: 1fr 6fr 1fr;
+
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-areas:
+    ". header header header header header   ."
+    ". svg svg .  options options  ."
+    ". footer footer footer footer footer   .";
+
+  #header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: end;
+    i {
+      color: black;
+    }
+  }
+
+  #svg {
+    grid-area: svg;
+    align-self: center;
+    justify-self: end;
+    svg {
+      width: 100%;
+    }
+  }
+
+  #options {
+    grid-area: options;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    div {
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      grid-template-rows: 1fr;
+      height: 100%;
+      width: 100%;
+
+      border-radius: 40px 40px;
+
+      align-items: center;
+      justify-items: center;
+      border: 1px solid white;
+
+      span {
+        font-size: 50px;
+      }
+
+      h4 {
+        justify-self: flex-start;
+      }
+      transition:all 0.5s ease-in-out;
+    }
+
+    div:hover{
+        background-color: white;
+        opacity:0.9;
+    }
+  }
+}
+
+
+#realTime{
+    width: 100vw;
+    height:100vh;
+
+    #myChart{
+        max-height:600px;
+    }
+}
