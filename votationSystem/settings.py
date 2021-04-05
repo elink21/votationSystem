@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'votationSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'EncryptedVotation',
+        'NAME': 'EncryptedVoting',
         'USER': 'root',
         'HOST': 'localhost',
         'PASSWORD': '*v%_M_%m9S$4Y5+%',

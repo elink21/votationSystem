@@ -8,6 +8,6 @@ class django_system(models.Model):
 
 
 class UserEncrypted(models.Model):
-    name= models.CharField(max_length=30)
-    password= models.CharField(max_length=30)
-    vote= models.CharField(max_length=30)
+    name= models.CharField(max_length=100)
+    password= models.CharField(max_length=100)
+    vote= models.CharField(max_length=100)
