@@ -376,19 +376,23 @@
   </div>
 
   <div id="options">
-    <div class="z-depth-1">
+    <div class="z-depth-1" id="scientific" onclick="selectParty('scientific',true)">
       <span class="material-icons"> biotech </span>
       <h4>Scientist party</h4>
     </div>
-    <div class="z-depth-1">
+    <div class="z-depth-1" id="worker" onclick="selectParty('worker',true)">
       <span class="material-icons"> engineering </span>
       <h4>Worker party</h4>
     </div>
-    <div class="z-depth-1">
+    <div class="z-depth-1" id="democrat" onclick="selectParty('democrat',true)">
       <span class="material-icons"> gavel </span>
       <h4>Democrat party</h4>
     </div>
   </div>
 </div>
+
+<script>
+  let actualVote = "{{vote}}";
+</script>
 
 {%endblock%}

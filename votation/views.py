@@ -30,6 +30,13 @@ def realTime(request):
     return render(request, 'realTime.html', {})
 
 
+def saveVote(request):
+    votant = django_system.objects.get(name=request.session['userName'])
+    votant.vote = request.GET['party']
+    votant.save()
+    return JsonResponse({}, status=200)
+
+
 def requestUpdate(request):
     workersVotes = django_system.objects.filter(vote="worker").count()
     scientificVotes = django_system.objects.filter(vote="scientific").count()

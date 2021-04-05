@@ -15,6 +15,9 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+        animation: {
+            duration: 500
+        },
         plugins: {
             title: {
                 display: true,
@@ -40,7 +43,7 @@ let requestUpdate = () => {
 
 }
 
-let realTime = setInterval(requestUpdate, 2000);
+let realTime = setInterval(requestUpdate, 1000);
 
 
 

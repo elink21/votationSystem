@@ -101,6 +101,11 @@ body {
   opacity: 0.9;
 }
 
+#votationInterface #options div.selected {
+  background-color: white;
+  opacity: 0.9;
+}
+
 #realTime {
   width: 100vw;
   height: 100vh;
