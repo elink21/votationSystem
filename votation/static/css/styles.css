@@ -7,7 +7,7 @@ body {
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 
-#loginInterface {
+#votationInterface {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr (2fr)[5] 1fr;
@@ -16,10 +16,10 @@ body {
       grid-template-rows: 1fr 6fr 1fr;
   width: 100vw;
   height: 100vh;
-      grid-template-areas: ". header header header header header   ." ". svg svg .  options options  ." ". footer footer footer footer footer   .";
+      grid-template-areas: ". header header header header header   ." ". svg svg .  options options  ." ". . . . . .   .";
 }
 
-#loginInterface #header {
+#votationInterface #header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -34,11 +34,11 @@ body {
   justify-items: end;
 }
 
-#loginInterface #header i {
+#votationInterface #header i {
   color: black;
 }
 
-#loginInterface #svg {
+#votationInterface #svg {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
@@ -50,11 +50,11 @@ body {
       justify-self: end;
 }
 
-#loginInterface #svg svg {
+#votationInterface #svg svg {
   width: 100%;
 }
 
-#loginInterface #options {
+#votationInterface #options {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
@@ -68,7 +68,7 @@ body {
   gap: 20px;
 }
 
-#loginInterface #options div {
+#votationInterface #options div {
   cursor: pointer;
   display: -ms-grid;
   display: grid;
@@ -88,15 +88,15 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-#loginInterface #options div span {
+#votationInterface #options div span {
   font-size: 50px;
 }
 
-#loginInterface #options div h4 {
+#votationInterface #options div h4 {
   justify-self: flex-start;
 }
 
-#loginInterface #options div:hover {
+#votationInterface #options div:hover {
   background-color: white;
   opacity: 0.9;
 }
@@ -108,5 +108,25 @@ body {
 
 #realTime #myChart {
   max-height: 600px;
+}
+
+#loginInterface {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+  height: 100vh;
+}
+
+#loginInterface #loginForm {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 10;
+  text-align: center;
+}
+
+#loginInterface #loginForm span {
+  font-size: 200px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -8,7 +8,7 @@ body {
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 
-#loginInterface {
+#votationInterface {
   display: grid;
   grid-template-columns: 1fr repeat(5, 2fr) 1fr;
   grid-template-rows: 1fr 6fr 1fr;
@@ -19,7 +19,7 @@ body {
   grid-template-areas:
     ". header header header header header   ."
     ". svg svg .  options options  ."
-    ". footer footer footer footer footer   .";
+    ". . . . . .   .";
 
   #header {
     grid-area: header;
@@ -68,22 +68,37 @@ body {
       h4 {
         justify-self: flex-start;
       }
-      transition:all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
-    div:hover{
-        background-color: white;
-        opacity:0.9;
+    div:hover {
+      background-color: white;
+      opacity: 0.9;
     }
   }
 }
 
+#realTime {
+  width: 100vw;
+  height: 100vh;
 
-#realTime{
-    width: 100vw;
-    height:100vh;
+  #myChart {
+    max-height: 600px;
+  }
+}
 
-    #myChart{
-        max-height:600px;
+#loginInterface {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+  height: 100vh;
+
+  #loginForm {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    text-align: center;
+    span{
+      font-size: 200px;
     }
+  }
 }
