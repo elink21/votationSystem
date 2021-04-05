@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 from votation.models import UserEncrypted, django_system
 # Create your views here.
@@ -10,7 +11,7 @@ def login(request):
 def logout(request):
     if 'userName' in request.session.keys():
         del request.session['userName']
-    return render(request, 'login.html', {})
+    return redirect('login')
 
 
 def vote(request):
@@ -27,3 +28,11 @@ def vote(request):
 
 def realTime(request):
     return render(request, 'realTime.html', {})
+
+
+def requestUpdate(request):
+    workersVotes = django_system.objects.filter(vote="worker").count()
+    scientificVotes = django_system.objects.filter(vote="scientific").count()
+    democratVotes = django_system.objects.filter(vote="democrat").count()
+    return JsonResponse({"workersVotes": workersVotes, "scientificVotes": scientificVotes,
+                         "democratVotes": democratVotes}, status=200)
